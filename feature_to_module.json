@@ -28,5 +28,8 @@
 	],
 	"CreditCard": [
 		"aisco.donation.creditcard"
+	],
+	"VirtualAccount":[
+		"aisco.donation.vaccount"
 	]
 }
