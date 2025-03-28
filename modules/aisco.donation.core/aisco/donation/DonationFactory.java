@@ -16,8 +16,21 @@ public class DonationFactory
         Donation record = null;
         try {
             Class<?> clz = Class.forName(fullyQualifiedName);
-            Constructor<?> constructor = clz.getConstructors()[0];
-            record = (Donation) constructor.newInstance(base);
+            Constructor<?>[] constructorList = clz.getDeclaredConstructors();
+            Constructor<?> constructor = null;
+            for (int i = 0; i < constructorList.length; i++) {
+                try {
+                  constructor = constructorList[i];
+                  record = (Donation) constructor.newInstance(base);
+                  i = constructorList.length;
+                } catch (IllegalArgumentException e) {
+                  if (i < constructorList.length - 1) {
+                    continue;
+                  } else {
+                    throw e;
+                  }
+                }
+              }
         }
         catch (IllegalArgumentException e)
         {
