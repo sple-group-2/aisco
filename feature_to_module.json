@@ -28,5 +28,9 @@
 	],
 	"CreditCard": [
 		"aisco.donation.creditcard"
+	],
+	"BankTransfer": [
+		"aisco.donation.banktransfer"
 	]
+
 }
