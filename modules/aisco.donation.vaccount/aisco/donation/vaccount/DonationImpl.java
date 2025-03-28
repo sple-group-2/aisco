@@ -24,8 +24,8 @@ public class DonationImpl extends DonationDecorator {
     	donationList = new ArrayList<>();
     	
     	HashMap<String,String> donation = new HashMap<String,String>();
-    	donation.put("name", "Jamal");
-    	donation.put("amount", "2500000");
+    	donation.put("name", "Tatang");
+    	donation.put("amount", "1500000");
     	donation.put("paymentMethod", "Virtual Account");
     	
     	donationList.add(donation);
