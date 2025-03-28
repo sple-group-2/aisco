@@ -31,5 +31,8 @@
 	],
 	"VirtualAccount":[
 		"aisco.donation.vaccount"
+	],
+	"BankTransfer": [
+		"aisco.donation.btransfer"
 	]
 }
